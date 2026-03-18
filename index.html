@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Weather - Precision Forecasts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="weather-container">
+    <header class="app-header">
+      <h1 class="app-title">Global Weather</h1>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="country-input" list="country-list" placeholder="Country name..." autocomplete="off">
+      <datalist id="country-list">
+        <option value="United Kingdom">
+        <option value="USA">
+        <option value="France">
+        <option value="Japan">
+        <option value="Germany">
+        <option value="UAE">
+        <option value="Singapore">
+        <option value="Finland">
+      </datalist>
+      <button id="search-country-btn">Country</button>
+    </div>
+    
+    <div class="search-section">
+      <input type="text" id="city-input" list="city-list" placeholder="City name..." autocomplete="off">
+      <datalist id="city-list">
+        <option value="London">
+        <option value="New York">
+        <option value="Paris">
+        <option value="Tokyo">
+        <option value="Berlin">
+        <option value="Dubai">
+        <option value="Singapore">
+        <option value="Helsinki">
+      </datalist>
+      <button id="search-city-btn">City</button>
+    </div>
+
+    <div id="weather-display" class="weather-info">
+      <!-- Default state: Looking for data... -->
+      <div id="status-message" class="status-msg">
+        Enter a city or country to get the forecast.
+      </div>
+      
+      <div id="weather-content" style="display: none;">
+        <img id="country-flag" class="flag-icon" src="" alt="Flag">
+        <span id="country-label" class="country-label">...</span>
+        <h1 id="location-name" class="location">...</h1>
+        
+        <div class="temp-container">
+          <span id="temp-value" class="temperature">--</span><span class="unit">°C</span>
+        </div>
+        
+        <p id="weather-description" class="description">--</p>
+
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="detail-label">Humidity</span>
+            <span id="humidity-value" class="detail-value">--%</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Wind Speed</span>
+            <span id="wind-speed" class="detail-value">-- km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
